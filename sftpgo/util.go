@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/drakkan/terraform-provider-sftpgo/sftpgo/client"
+	"github.com/NGizila/terraform-provider-sftpgo/sftpgo/client"
 	"github.com/hashicorp/terraform-plugin-framework-validators/int64validator"
 	"github.com/hashicorp/terraform-plugin-framework-validators/listvalidator"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
@@ -27,7 +27,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/sftpgo/sdk"
+	"github.com/NGizila/sdk"
 )
 
 const (
@@ -141,6 +141,10 @@ func getComputedSchemaForFilesystem() schema.SingleNestedAttribute {
 					"bucket": schema.StringAttribute{
 						Computed: true,
 					},
+                    "endpoint": schema.StringAttribute{
+                        Computed:    true,
+                        Description: "Optional endpoint",
+                    },
 					"key_prefix": schema.StringAttribute{
 						Computed:    true,
 						Description: `If specified then the SFTPGo user will be restricted to objects starting with this prefix.`,
@@ -453,6 +457,10 @@ func getSchemaForFilesystem() schema.SingleNestedAttribute {
 						Optional:    true,
 						Description: "Set to 1 if Hierarchical namespace is enabled for the bucket. " + enterpriseFeatureNote + ".",
 					},
+                    "endpoint": schema.StringAttribute{
+                        Optional:    true,
+                        Description: "Optional endpoint. Default is 'storage.googleapis.com'. Specify custom endpoint if needed.",
+                    },
 					"key_prefix": schema.StringAttribute{
 						Optional:    true,
 						Description: `If specified then the SFTPGo user will be restricted to objects starting with the specified prefix. The prefix must not start with "/" and must end with "/"`,

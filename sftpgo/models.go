@@ -24,10 +24,10 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-framework/types/basetypes"
-	"github.com/sftpgo/sdk"
-	"github.com/sftpgo/sdk/kms"
+	"github.com/NGizila/sdk"
+	"github.com/NGizila/sdk/kms"
 
-	"github.com/drakkan/terraform-provider-sftpgo/sftpgo/client"
+	"github.com/NGizila/terraform-provider-sftpgo/sftpgo/client"
 )
 
 // userResourceModel maps users schema data.
@@ -928,6 +928,7 @@ func (f *filesystem) getTFAttributes() map[string]attr.Type {
 		"gcsconfig": types.ObjectType{
 			AttrTypes: map[string]attr.Type{
 				"bucket":                types.StringType,
+				"endpoint":              types.StringType,
 				"key_prefix":            types.StringType,
 				"credentials":           types.StringType,
 				"automatic_credentials": types.Int64Type,
@@ -1027,6 +1028,7 @@ func (f *filesystem) toSFTPGo(ctx context.Context) (client.Filesystem, diag.Diag
 		GCSConfig: client.GCSFsConfig{
 			BaseGCSFsConfig: client.BaseGCSFsConfig{
 				Bucket:                f.GCSConfig.Bucket.ValueString(),
+				Endpoint:              f.GCSConfig.Endpoint.ValueString(),
 				KeyPrefix:             f.GCSConfig.KeyPrefix.ValueString(),
 				AutomaticCredentials:  int(f.GCSConfig.AutomaticCredentials.ValueInt64()),
 				HierarchicalNamespace: int(f.GCSConfig.HierarchicalNamespace.ValueInt64()),
@@ -1139,6 +1141,7 @@ func (f *filesystem) fromSFTPGo(ctx context.Context, fs *client.Filesystem) diag
 	case sdk.GCSFilesystemProvider:
 		f.GCSConfig = &gcsFsConfig{
 			Bucket:                getOptionalString(fs.GCSConfig.Bucket),
+			Endpoint:              getOptionalString(fs.GCSConfig.Endpoint),
 			KeyPrefix:             getOptionalString(fs.GCSConfig.KeyPrefix),
 			Credentials:           getOptionalString(getSecretFromSFTPGo(fs.GCSConfig.Credentials)),
 			AutomaticCredentials:  getOptionalInt64(int64(fs.GCSConfig.AutomaticCredentials)),

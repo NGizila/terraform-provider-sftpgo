@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     sftpgo = {
-      source = "registry.terraform.io/drakkan/sftpgo"
+      source = "registry.terraform.io/NGizila/sftpgo"
     }
   }
 }

@@ -19,9 +19,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/drakkan/terraform-provider-sftpgo/sftpgo/client"
+	"github.com/NGizila/terraform-provider-sftpgo/sftpgo/client"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
-	"github.com/sftpgo/sdk"
+	"github.com/NGizila/sdk"
 	"github.com/stretchr/testify/require"
 )
 
