@@ -6,7 +6,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
 	"github.com/hashicorp/terraform-plugin-go/tfprotov6"
 
-	"github.com/drakkan/terraform-provider-sftpgo/sftpgo/client"
+	"github.com/NGizila/terraform-provider-sftpgo/sftpgo/client"
 )
 
 // we have to set the following env vars to run tests

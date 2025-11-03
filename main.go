@@ -5,7 +5,7 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
 
-	"github.com/drakkan/terraform-provider-sftpgo/sftpgo"
+	"github.com/NGizila/terraform-provider-sftpgo/sftpgo"
 )
 
 // Provider documentation generation.
@@ -13,6 +13,6 @@ import (
 
 func main() {
 	providerserver.Serve(context.Background(), sftpgo.New, providerserver.ServeOpts{
-		Address: "registry.terraform.io/drakkan/sftpgo",
+		Address: "registry.terraform.io/NGizila/sftpgo",
 	})
 }

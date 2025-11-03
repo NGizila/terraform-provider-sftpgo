@@ -1,14 +1,14 @@
-module github.com/drakkan/terraform-provider-sftpgo
+module github.com/NGizila/terraform-provider-sftpgo
 
 go 1.24.0
 
 require (
+	github.com/NGizila/sdk v0.1.9-custom
 	github.com/hashicorp/terraform-plugin-framework v1.15.1
 	github.com/hashicorp/terraform-plugin-framework-validators v0.18.0
 	github.com/hashicorp/terraform-plugin-go v0.28.0
 	github.com/hashicorp/terraform-plugin-log v0.9.0
 	github.com/hashicorp/terraform-plugin-testing v1.13.3
-	github.com/sftpgo/sdk v0.1.9-0.20241011171103-64fc18a344f9
 	github.com/stretchr/testify v1.11.1
 )
 
@@ -67,7 +67,4 @@ require (
 	google.golang.org/grpc v1.75.0 // indirect
 	google.golang.org/protobuf v1.36.8 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-)
-replace(
-		github.com/sftpgo/sdk => github.com/NGizila/sdk v0.1.9-custom
 )
