@@ -15,8 +15,8 @@
 package client
 
 import (
-	"github.com/sftpgo/sdk"
-	"github.com/sftpgo/sdk/kms"
+	"github.com/NGizila/sdk"
+	"github.com/NGizila/sdk/kms"
 )
 
 var (

@@ -21,7 +21,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 	"github.com/stretchr/testify/require"
 
-	"github.com/drakkan/terraform-provider-sftpgo/sftpgo/client"
+	"github.com/NGizila/terraform-provider-sftpgo/sftpgo/client"
 )
 
 func TestAccRuleResource(t *testing.T) {

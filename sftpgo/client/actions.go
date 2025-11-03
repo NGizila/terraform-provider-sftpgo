@@ -21,7 +21,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/sftpgo/sdk/kms"
+	"github.com/NGizila/sdk/kms"
 )
 
 // Supported event actions
