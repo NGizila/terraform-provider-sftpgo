@@ -62,6 +62,7 @@ type SFTPFsConfig struct {
 // BaseGCSFsConfig defines the base configuration for Google Cloud Storage based filesystems
 type BaseGCSFsConfig struct {
 	Bucket                string `json:"bucket,omitempty"`
+	Endpoint              string `json:"endpoint,omitempty"`
 	KeyPrefix             string `json:"key_prefix,omitempty"`
 	CredentialFile        string `json:"-"`
 	AutomaticCredentials  int    `json:"automatic_credentials,omitempty"`

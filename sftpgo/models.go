@@ -802,6 +802,7 @@ type s3FsConfig struct {
 
 type gcsFsConfig struct {
 	Bucket                types.String `tfsdk:"bucket"`
+	Endpoint              types.String `tfsdk:"endpoint"`
 	KeyPrefix             types.String `tfsdk:"key_prefix"`
 	Credentials           types.String `tfsdk:"credentials"`
 	AutomaticCredentials  types.Int64  `tfsdk:"automatic_credentials"`
