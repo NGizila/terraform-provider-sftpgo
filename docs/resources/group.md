@@ -342,6 +342,7 @@ Read-Only:
 - `bucket` (String)
 - `credentials` (String) SFTPGo secret formatted as string: "$<status>$<key>$<additional data length>$<additional data><payload>".
 - `hns` (Number) 1 if Hierarchical namespace support is enabled for the bucket. Available in the Enterprise edition.
+- `endpoint` (String) Optional endpoint
 - `key_prefix` (String) If specified then the SFTPGo user will be restricted to objects starting with this prefix.
 - `storage_class` (String)
 - `upload_part_max_time` (Number) The maximum time allowed, in seconds, to upload a single chunk. The default value is 32. Not set means use the default.

@@ -91,6 +91,7 @@ Optional:
 - `automatic_credentials` (Number)
 - `credentials` (String, Sensitive) Plain text credentials. If you set a string in SFTPGo secret format, SFTPGo will keep the current secret on updates while the Terraform plan will save your value. Don't do this unless you are sure the values match (e.g because you imported an existing resource).
 - `hns` (Number) Set to 1 if Hierarchical namespace is enabled for the bucket. Available in the Enterprise edition.
+- `endpoint` (String) Optional endpoint. Default is "storage.googleapis.com". Leave empty to use default, otherwise specify it without https.
 - `key_prefix` (String) If specified then the SFTPGo user will be restricted to objects starting with the specified prefix. The prefix must not start with "/" and must end with "/"
 - `storage_class` (String) The storage class to use when storing objects. Leave not set for default.
 - `upload_part_max_time` (Number) The maximum time allowed, in seconds, to upload a single chunk. The default value is 32. Not set means use the default.
