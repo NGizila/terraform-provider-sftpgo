@@ -17,7 +17,7 @@ package sftpgo
 import (
 	"testing"
 
-	"github.com/NGizila/sdk/kms"
+	"github.com/sftpgo/sdk/kms"
 	"github.com/stretchr/testify/require"
 )
 

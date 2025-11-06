@@ -23,7 +23,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/planmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 
-	"github.com/NGizila/terraform-provider-sftpgo/sftpgo/client"
+	"github.com/drakkan/terraform-provider-sftpgo/sftpgo/client"
 )
 
 // Ensure the implementation satisfies the expected interfaces.

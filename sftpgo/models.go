@@ -24,10 +24,10 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-framework/types/basetypes"
-	"github.com/NGizila/sdk"
-	"github.com/NGizila/sdk/kms"
+	"github.com/sftpgo/sdk"
+	"github.com/sftpgo/sdk/kms"
 
-	"github.com/NGizila/terraform-provider-sftpgo/sftpgo/client"
+	"github.com/drakkan/terraform-provider-sftpgo/sftpgo/client"
 )
 
 // userResourceModel maps users schema data.

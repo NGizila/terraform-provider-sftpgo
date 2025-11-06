@@ -25,7 +25,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types/basetypes"
 
-	"github.com/NGizila/terraform-provider-sftpgo/sftpgo/client"
+	"github.com/drakkan/terraform-provider-sftpgo/sftpgo/client"
 )
 
 // Ensure the implementation satisfies the expected interfaces.

@@ -31,7 +31,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
 
-	"github.com/NGizila/terraform-provider-sftpgo/sftpgo/client"
+	"github.com/drakkan/terraform-provider-sftpgo/sftpgo/client"
 )
 
 const (
